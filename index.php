@@ -30,7 +30,6 @@ function send_mattermost_message($entry, $form){
 | **Email:**    | ' . $help_email . '|
 | **Message:**  | ' . $help_message . '|
 | **URL:**      | [' . $help_url . '](' . $help_url . ')|');
-	var_dump($content);
 	$data_string = '{"text": '. $content . ' }';
 	$ch = curl_init(MM_CHANNEL);// see variable in wp-config.php
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
